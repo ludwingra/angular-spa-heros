@@ -16,6 +16,7 @@ export class SearchHeroComponent implements OnInit {
     this._activeRouter.params.subscribe(params => {
       this.termino = params['heroe'];
       this.heroes = this._heroesService.searchHeroes(params['heroe']);
+      console.log(this.heroes);
     })
 
   }
